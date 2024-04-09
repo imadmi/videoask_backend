@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "annarabic",
+  "private_key_id": "040eb0d9c8e146041023d4f9660bf18297efa0df",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCydlpi9in+8X++\npuX59xI2pSLOGBhfM9fnYsJvf5hgaq6CUf9/wlPIY9v2g0Tm9YBYjXL+n3A2Vbza\nl1E/AXuW6p3OeGugJGURt0XhjtYjlWgTXRG7rXD8MWv/NA+aq60axP7zP0cs4d87\nornnqtYHsr9FusFPtNOV5y9qzdttYLcj4DpPxwkN9uVGLC0QYKNkFPbSQEP+Ss2R\nWoCfHz8+TSSw/Zwkkr+eQ1sXlKV4+OvalZfhD1wM9YUVPmHE5FPnNRqXEGAtPEhF\nR3SYVih8dczGXhXfmziJzGayyBqbl2A+G5eoUmlSxfQxsnFwpr3GJKhUStfyS1sW\ncTemA1RdAgMBAAECggEAAPW/9sYI0hMAilOxjtTamF21wjDhC5JG2RBeLxqiTADr\nWRzVTcE2NP7hoLcyU++bFDfAkQTl7RjleAc2EUDHX0XPa3GKqRwdc9dcLQJnUvqf\nA1YYoaEBrsZ91k9mL8FjQ66uphEKNcdKQt2OIp0wxtHhPiAHdwF9ecPd5ZGKTF/l\nXqqu9uC3GX460Symf3E7PjUjRIINd3H4T/IA+4gGCixbhOicgckB/ywkwEoJJxYR\n7SyxwJGepMGKgpQOuCh9/Y3CQCiiJ9v8kWkzbr4f2a9YaidQthyI9MeRrs38BEAc\nfu0x+Q3DTUmQ8j6eg00j4PMZbCR6xW6YyV3tHZH58QKBgQDY/+GHqhqn5zKEZvmG\nKSycHb5JXCVUcWoimOapQ4Tyf0IDFChq1unGZdiFc7Oub33MgPkDrWhbzc5QJcrr\nOdV6FfFp/PSygumHdehhrB0/rnWwY45Ido8WR97fm/d15IK/VEAVQoTZru+3zk0N\nKbBA+veNAb4NOhajYpSCXLg8rQKBgQDSiWFDRk/eNNRpX43nsCY80IqT0WmF8+Fj\ne5Tf3Wx/o00dWDwRxPH43ht0HjvxCcNUBcAiZzlGDPPl9PL+pZyhleZBSyOen1jr\nAMx1QsIXMm9OWiwvszi+uTSUbwaXbtVP5XZmmgm8ycuJXCWvDRmTn5nYRwW5S3mb\nWOTuS1g8cQKBgQCxU3DGPyBnQswKXGfd1XnJ3ZhpNG6g8clMmmwrt6xFye50u51H\nqXYCFan5bBJSInPHkUFsWuFj2+uTnT6UOH+Vs6bC+N4xnj8d3iFW56JDLtqnmMNl\nvdSx3WtoiXiQE3swxLVVajVL+eOU7XYTopSQlUWEKf9XqbdkLqOzX/eCRQKBgQCW\nxypv+rACTEV/PZ6sOfv4e8Vy/XucIj/ddkj1Vmd4taPpiyJh+3DrsW1p6Kk3A63u\nw7uJJ/HdmDMoEhfghQy6sFbZlg1pcWdFzimfJPNJl6YdL/kLJEhUVuEwGJ9Y3lhI\nQuZbrp+go8hvlB2s0y3pClksihiwTjxGJBC4FB+aEQKBgDVuEgRnIYyFnc7YMqhX\nQ/XdE36vzLqtgz8PQXP2YCxkmHgWHXeClf+IzOsOp9ZLpAlDKPNAEL7eZp0Sa1vw\nh4q1kOpkpZQvvCxgq022QJe8fwyn5e2BLMlcOO4eduqHDN16o6PSkfSjaJJ8p9M4\nER5BahbLLRQgsR+86v7nZ1wY\n-----END PRIVATE KEY-----\n",
+  "client_email": "imad-service-account@annarabic.iam.gserviceaccount.com",
+  "client_id": "103222652198238454123",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/imad-service-account%40annarabic.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
