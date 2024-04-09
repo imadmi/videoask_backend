@@ -8,6 +8,7 @@ app.include_router(videoAskRouter)
 origins = [
     "http://localhost:3000",
     "https://interactive-videos-prod.vercel.app/",
+    "https://videoask-fawn.vercel.app",
 ]
 
 app.add_middleware(
