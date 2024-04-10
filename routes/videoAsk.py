@@ -51,3 +51,13 @@ async def delete_all_files():
         return {"success": True}
     except Exception as e:
         return {"success": False, "error": str(e)}
+
+
+from bson import ObjectId
+@videoAskRouter.delete("/deleteVideoAsk/{id}")
+async def delete_videoAsk_by_id(id: str):
+    try:
+        videoAsk_collection.delete_one({"_id": ObjectId(id)})
+        return {"success": True}
+    except Exception as e:
+        return {"success": False, "error": str(e)}
