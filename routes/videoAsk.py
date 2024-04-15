@@ -43,6 +43,8 @@ async def upload_file(file: UploadFile = File(...)):
         return {"success": False, "error": str(e)}
     
 
+# dev mode routes :
+
 from config.database import videoAsk_collection
 @videoAskRouter.delete("/deleteAllVideoAsks")
 async def delete_all_files():
