@@ -1,19 +1,25 @@
-from fastapi import APIRouter, UploadFile, File
-from models.videoAsk import VideoAsk
-from schemas.videoAsk import save_VideoAsk_in_db, get_videos_from_db, get_video_from_db, upload_blob
 from typing import List
 
+from fastapi import APIRouter, File, UploadFile
+
+from models.videoAsk import VideoAsk
+from schemas.videoAsk import (
+    get_video_from_db,
+    get_videos_from_db,
+    save_VideoAsk_in_db,
+    upload_blob,
+)
 
 videoAskRouter = APIRouter(tags=["videoAsk"])
 
 
 @videoAskRouter.post("/saveVideoAsk")
-async def save_VideoAsk(videoAsks : List[VideoAsk]):
+async def save_VideoAsk(videoAsks: List[VideoAsk]):
     try:
         await save_VideoAsk_in_db(videoAsks)
         return {"success": "true"}
     except Exception as e:
-        return { "success": "false", "error": str(e) }
+        return {"success": "false", "error": str(e)}
 
 
 @videoAskRouter.get("/getVideoAsks")
@@ -39,27 +45,5 @@ async def upload_file(file: UploadFile = File(...)):
     try:
         url = await upload_blob(file)
         return {"success": True, "url": url}
-    except Exception as e:
-        return {"success": False, "error": str(e)}
-    
-
-# dev mode routes :
-
-from config.database import videoAsk_collection
-@videoAskRouter.delete("/deleteAllVideoAsks")
-async def delete_all_files():
-    try:
-        videoAsk_collection.delete_many({})
-        return {"success": True}
-    except Exception as e:
-        return {"success": False, "error": str(e)}
-
-
-from bson import ObjectId
-@videoAskRouter.delete("/deleteVideoAsk/{id}")
-async def delete_videoAsk_by_id(id: str):
-    try:
-        videoAsk_collection.delete_one({"_id": ObjectId(id)})
-        return {"success": True}
     except Exception as e:
         return {"success": False, "error": str(e)}

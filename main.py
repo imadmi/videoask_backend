@@ -1,9 +1,12 @@
 from fastapi import FastAPI
-from routes.videoAsk import videoAskRouter
 from fastapi.middleware.cors import CORSMiddleware
+
+from routes.dev import devModeRouter
+from routes.videoAsk import videoAskRouter
 
 app = FastAPI()
 app.include_router(videoAskRouter)
+app.include_router(devModeRouter)
 
 origins = [
     "http://localhost:3000",
@@ -21,3 +24,5 @@ app.add_middleware(
 
 
 # Python version : 3.8.10
+
+# pre-commit run --all-files

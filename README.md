@@ -26,6 +26,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 2- Access the API documentation at http://localhost:8000/docs or http://localhost:8000/redoc.
+
 3- Use the provided endpoints to interact with the service.
 
 ## Endpoints
