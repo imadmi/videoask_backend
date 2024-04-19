@@ -8,6 +8,7 @@ uri = os.getenv("MONGO_URI")
 client = AsyncIOMotorClient(uri)
 mydb = client["abc"]
 videoAsk_collection = mydb["VideoAsk"]
+stats_collection = mydb["stats"]
 
 
 try:

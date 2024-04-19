@@ -3,7 +3,7 @@ from typing import Dict
 from bson import ObjectId
 from fastapi import APIRouter
 
-from config.database import videoAsk_collection
+from config.database import videoAsk_collection, stats_collection
 
 devModeRouter = APIRouter(tags=["videoAsk"])
 
@@ -26,25 +26,31 @@ async def delete_videoAsk_by_id(id: str):
         return {"success": False, "error": str(e)}
 
 
-query_params_dict: Dict[str, int] = {}
-
-
 @devModeRouter.get("/track-query-param/")
 async def track_query_param(query_param: str):
-    """
-    Endpoint to track query parameters and their counts.
+    try:
+        db_query_param = await stats_collection.find_one({"query_param": query_param})
+        if db_query_param:
+            await stats_collection.update_one({"_id": db_query_param["_id"]}, {"$inc": {"count": 1}})
+        else:
+            await stats_collection.insert_one({"query_param": query_param, "count": 1})
+        return {"query_param": query_param, "count": (db_query_param["count"] + 1) if db_query_param else 1}
+    except Exception as e:
+        return {"error": str(e)}
 
-    Args:
-        query_param (str): Query parameter sent in the GET request.
 
-    Returns:
-        dict: Updated dictionary containing query parameters and their counts.
-    """
-    if query_param in query_params_dict:
-        # Increment count if query_param exists in dictionary
-        query_params_dict[query_param] += 1
-    else:
-        # Add query_param to dictionary with count of 1 if it doesn't exist
-        query_params_dict[query_param] = 1
+@devModeRouter.get("/get-all-stats")
+async def get_all_stats():
+    try:
+        all_stats = []
+        cursor = await stats_collection.find().to_list(1000)
 
-    return query_params_dict
+        for stat in cursor:
+            stat["_id"] = str(stat["_id"])
+            all_stats.append(stat)
+
+        return all_stats
+
+    except Exception as e:
+        return {"error": str(e)}
+
